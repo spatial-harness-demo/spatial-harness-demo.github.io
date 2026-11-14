@@ -11,9 +11,11 @@ Explore the recorded plans, tool results and verification evidence at https://sp
 | Farthest object | 4258, 4416, 4310, 4592 |
 | Relative direction | 5372, 5293, 5591, 5899 |
 | Room area | 6713, 6772, 6788 |
+| Route planning | 6199, 6203 |
 | Requested cases | 11, 6382, 6232, 6195 |
 
-The gallery contains 28 cases from 25 scenes. The seven benchmark categories contain 24 full-credit results. Cases 214, 4017, 4592, 5293, and 5899 reached the correct answer after executing replans.
+The gallery contains 30 cases from 26 scenes. The eight benchmark categories contain 26 full-credit results. Cases 214, 4017, 4592, 5293, and 5899 reached the correct answer after executing replans.
+Cases 6199 and 6203 come from the earlier AutoDL geometry solver. Each walkthrough shows both successful turn predictions and the selected landmarks on their matching frames from the current ReVSI 64-frame subset.
 The requested cases are separate: #11 has a dataset reference but no completed run; #6382 and #6232 have recorded v9 retry 1 attempts that ended with insufficient evidence. Their recovery proposals were not executed. Case #6195 shows the two marked floor-lamp candidates, the verifier’s three replies, and the validation failure in its November v9.2 run.
 
 The original 13-question replay metrics in About retain their original denominator. Per-case numerical scores use MRA; full credit is within 5% relative error.
@@ -24,7 +26,7 @@ Source records and media hashes are documented in data/category-provenance.json 
 
 ## Site files and deployment
 
-The complete static site, including HTML, CSS, JavaScript, data and media, is **site.zip** in [release v1.4.0](https://github.com/spatial-harness-demo/spatial-harness-demo.github.io/releases/tag/v1.4.0). The release also includes SHA256SUMS.
+The complete static site, including HTML, CSS, JavaScript, data and media, is **site.zip** in [release v1.5.0](https://github.com/spatial-harness-demo/spatial-harness-demo.github.io/releases/tag/v1.5.0). The release also includes SHA256SUMS.
 
 The manually triggered Pages workflow downloads this exact release archive, verifies its SHA-256 and deploys it using GitHub’s official Pages actions. Earlier releases remain available for rollback. No inference endpoint, analytics or external runtime service is required.
 
