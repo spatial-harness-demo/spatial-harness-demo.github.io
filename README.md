@@ -1,27 +1,32 @@
 # The Spatial Harness / ReVSI evidence walkthrough demo
 
-[Open the interactive demo](https://spatial-harness-demo.github.io/)
+Explore the recorded plans, tool results and verification evidence at https://spatial-harness-demo.github.io/.
 
-Six selected correct examples, grouped by category:
-
-| Category | Cases |
+| Category | Case IDs |
 | --- | --- |
-| Counting | **214 — Count backpacks** |
-| Distance | **2225 — Object distance**, **3457 — Closest object** |
-| Direction | **5372 — Direction · backward**, **5293 — TV direction** |
-| Area | **6713 — Combined area** |
+| Counting | 214, 19, 756 |
+| Object size | 1113, 2100, 1187 |
+| Object distance | 2225, 2339, 3356 |
+| Closest object | 3457, 4036, 4242 |
+| Farthest object | 4258, 4416, 4310 |
+| Relative direction | 5372, 5293, 5591 |
+| Room area | 6713, 6772, 6788 |
+| Requested cases | 11, 6382, 6232 |
 
-Cases **214** and **5293** show the recorded initial attempt, executed replan and correct final answer. Case 214 reacquires backpack evidence after a failed SAM call and returns **1**. Case 5293 reuses evidence, changes the TV pair decision from **Keep separate** to **Merge**, and returns **A — left**. Neither activates a backup or rewrites the grounding prompt.
+The seven benchmark categories each contain three full-credit results. Cases 214 and 5293 reached the correct answer after an executed replan.
+The requested cases are separate: #11 has a dataset reference but no completed run; #6382 and #6232 have recorded v9 retry 1 attempts that ended with insufficient evidence. Their recovery proposals were not executed.
 
-Use the top arrows to step through tool results and verifier checks, or Play to animate each round. Playback pauses between rounds. Repeated checks are grouped in expandable summaries, with every original decision and evidence image available. Scene videos run at 4× speed. This static walkthrough does not launch inference.
+The original 13-question replay metrics in About retain their original denominator. Per-case numerical scores use MRA; full credit is within 5% relative error.
 
-Ground truth and per-case accuracy remain visible. The original 13-case aggregate metrics in About retain their historical denominator; they are not scores for these six selected examples or the later 39-question and B200 runs.
+Play animates recorded events and pauses between rounds. The top arrows move through plans, evidence and verifier decisions. Scene videos use the 64 ordered source frames.
+
+Source records and media hashes are documented in data/category-provenance.json and the other provenance files under data/. The public package excludes private execution logs. No inference service is required.
 
 ## Site files and deployment
 
-The complete static site, including HTML, CSS, JavaScript, data and media, is **site.zip** in [release v1.1.0](https://github.com/spatial-harness-demo/spatial-harness-demo.github.io/releases/tag/v1.1.0). The release also includes SHA256SUMS.
+The complete static site, including HTML, CSS, JavaScript, data and media, is **site.zip** in [release v1.2.0](https://github.com/spatial-harness-demo/spatial-harness-demo.github.io/releases/tag/v1.2.0). The release also includes SHA256SUMS.
 
-The manually triggered Pages workflow downloads this exact release archive, verifies its SHA-256 and deploys it using GitHub’s official Pages actions. Version 1.0.0 remains available for rollback. No inference endpoint, analytics or external runtime service is required.
+The manually triggered Pages workflow downloads this exact release archive, verifies its SHA-256 and deploys it using GitHub’s official Pages actions. Earlier releases remain available for rollback. No inference endpoint, analytics or external runtime service is required.
 
 For local viewing, unzip site.zip, run `python3 -m http.server 8000` in the extracted folder, and open the server address.
 
