@@ -18,13 +18,13 @@ The requested cases are separate: #11 has a dataset reference but no completed r
 
 The original 13-question replay metrics in About retain their original denominator. Per-case numerical scores use MRA; full credit is within 5% relative error.
 
-Play animates recorded events and pauses between rounds. The top arrows move through plans, evidence and verifier decisions. Scene videos use the 64 ordered source frames.
+Play animates recorded events and pauses between rounds. The top arrows move through plans, evidence and verifier decisions. Scene videos use the 64 ordered source frames. Recorded DA3 reconstructions appear in Execution, followed by the verifier decision and reason. The depth images use the same scene and frame labels as semantic checks already shown. Four recordings have no earlier semantic frame at reconstruction time.
 
 Source records and media hashes are documented in data/category-provenance.json and the other provenance files under data/. The public package excludes private execution logs. No inference service is required.
 
 ## Site files and deployment
 
-The complete static site, including HTML, CSS, JavaScript, data and media, is **site.zip** in [release v1.3.0](https://github.com/spatial-harness-demo/spatial-harness-demo.github.io/releases/tag/v1.3.0). The release also includes SHA256SUMS.
+The complete static site, including HTML, CSS, JavaScript, data and media, is **site.zip** in [release v1.4.0](https://github.com/spatial-harness-demo/spatial-harness-demo.github.io/releases/tag/v1.4.0). The release also includes SHA256SUMS.
 
 The manually triggered Pages workflow downloads this exact release archive, verifies its SHA-256 and deploys it using GitHub’s official Pages actions. Earlier releases remain available for rollback. No inference endpoint, analytics or external runtime service is required.
 
