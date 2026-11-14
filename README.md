@@ -28,7 +28,7 @@ Source records and media hashes are documented in data/category-provenance.json 
 
 ## Site files and deployment
 
-The complete static site, including HTML, CSS, JavaScript, data and media, is **site.zip** in [release v1.8.0](https://github.com/spatial-harness-demo/spatial-harness-demo.github.io/releases/tag/v1.8.0). The release also includes SHA256SUMS.
+The complete static site, including HTML, CSS, JavaScript, data and media, is **site.zip** in [release v1.8.1](https://github.com/spatial-harness-demo/spatial-harness-demo.github.io/releases/tag/v1.8.1). The release also includes SHA256SUMS.
 
 The manually triggered Pages workflow downloads this exact release archive, verifies its SHA-256 and deploys it using GitHub’s official Pages actions. Earlier releases remain available for rollback. No inference endpoint, analytics or external runtime service is required.
 
