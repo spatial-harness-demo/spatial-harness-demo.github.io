@@ -26,8 +26,8 @@ jobs:
           curl --proto '=https' --tlsv1.2 --fail --location \
             --retry 5 --retry-all-errors --retry-delay 3 \
             --output site.zip \
-            'https://github.com/spatial-harness-demo/spatial-harness-demo.github.io/releases/download/v1.7.0/site.zip'
-          printf '%s  %s\n' 'ded81800bb1e579246b7af6e918a845536921a90fccd401dc65290b4df1453fa' 'site.zip' | sha256sum --check --strict
+            'https://github.com/spatial-harness-demo/spatial-harness-demo.github.io/releases/download/v1.8.0/site.zip'
+          printf '%s  %s\n' 'c4bec11f5580d2fc2e0b89df6db2f7392095ba9bd976b1dfb4e6d291669ad0ae' 'site.zip' | sha256sum --check --strict
           mkdir _site
           unzip -q site.zip -d _site
           test -f _site/index.html
