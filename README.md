@@ -24,11 +24,11 @@ Play animates recorded events and pauses between rounds. The top arrows move thr
 
 Source records and media hashes are documented in data/category-provenance.json and the other provenance files under data/. The public package excludes private execution logs. No inference service is required.
 
-[DSR-Train hallway motion](https://spatial-harness-demo.github.io/dsr-hallway.html) shows the measured outcome over frames 60–64 for row 13551 and the earlier forecast through frame 60.
+[DSR-Train hallway motion](https://spatial-harness-demo.github.io/dsr-hallway.html) shows the recorded plan for row 13551, the SAM3 masks, the DA3 positions and the raw AutoDL answer and trajectory. The blind forecast through frame 60 selected A. The separate measurement through frame 64 selected B.
 
 ## Site files and deployment
 
-The complete static site, including HTML, CSS, JavaScript, data and media, is **site.zip** in [release v1.7.0](https://github.com/spatial-harness-demo/spatial-harness-demo.github.io/releases/tag/v1.7.0). The release also includes SHA256SUMS.
+The complete static site, including HTML, CSS, JavaScript, data and media, is **site.zip** in [release v1.8.0](https://github.com/spatial-harness-demo/spatial-harness-demo.github.io/releases/tag/v1.8.0). The release also includes SHA256SUMS.
 
 The manually triggered Pages workflow downloads this exact release archive, verifies its SHA-256 and deploys it using GitHub’s official Pages actions. Earlier releases remain available for rollback. No inference endpoint, analytics or external runtime service is required.
 
